@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pong Game</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    canvas {
-      display: block;
-      margin: 0 auto;
-      background-color: black;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: black;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-  <div class="container mx-auto px-4 py-10">
-    <h1 class="text-4xl font-bold mb-6 text-center">Pong Game</h1>
-    <div class="flex flex-col items-center">
-      <button id="connectMetamask" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
-        Connect MetaMask
-      </button>
-      <h2 id="waitingMessage" class="text-xl font-semibold mb-2">Waiting for players...</h2>
-      <h2 class="text-2xl font-bold mb-2">Connected Players:</h2>
-      <ul id="playerList" class="list-disc list-inside mb-4"></ul>
-      <canvas id="gameCanvas" width="640" height="480"></canvas>
-    </div>
-  </div>
-  <script src="game.js"></script>
-  <script src="web3.min.js"></script>
-  <script src="ethereum-pong.js"></script>
+<body>
+<h1>Pong Game</h1>
+<button id="connectMetamask">Connect MetaMask</button>
+<h2 id="waitingMessage">Waiting for players...</h2>
+<h2>Connected Players:</h2>
+<ul id="playerList"></ul>
+<canvas id="gameCanvas" width="640" height="480"></canvas>
+<script src="web3.min.js"></script>
+<script src="ethereum-pong.js"></script>
+<script src="client.js"></script>
 </body>
 </html>
